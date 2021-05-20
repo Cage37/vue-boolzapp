@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE-BOOLZAPP</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"/>
+</head>
+<body>
+    
+
+    <div id="app">
+        <div class="topbackground">
+            <div class="container">
+                <header>
+
+                    <!-- LEFT HEADER -->
+
+                    <div class="leftheader">
+                        <img src="./assets/img/avatar_io.jpg" alt="">
+                        <p>Sara Sixti</p>
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+
+                    <!-- RIGHT HEADER -->
+
+                    <div class="rightheader">
+                        <div class="topprofile">
+                            <img class="imgprofile" :src="topProfile.avatar" alt=""> 
+                            <div class="topprofilep">
+                                <p>{{topProfile.name}}</p>
+                                <span class="access">Ultimo accesso oggi alle:</span>
+                            </div>
+                        </div>
+                        <div class="icont">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-paperclip"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                </header>
+                <main>
+
+                    <!-- LEFT MAIN -->
+
+                   <div class="leftmain">
+                       <div class="topnav">
+                           <div class="contbell">
+                            <div class="backbell"><i class="fas fa-bell-slash"></i></div>
+                           </div>
+                           <div class="contnot">
+                            <p>Ricevi notifiche di nuovi messaggi</p>
+                            <a href="#">Attiva notifiche desktop</a>
+                           </div>
+                       </div>
+                       <div class="contsearch">
+                           <div class="continput">
+                               <div class="search">
+                                <i class="fas fa-search"></i>
+                               </div>
+                               <div class="inputdiv">
+                                   <input type="text" placeholder="Cerca o inizia una nuova chat">
+                               </div>
+                           </div>
+                       </div>
+                       <div>
+                        <div class="contact" v-for="(contact, index) in contacts" @click="selectProfile(index)"> 
+                            <img class="imgprofile" :src="contact.avatar" alt=""> 
+                            <p class="profile">{{contact.name}}</p>
+                        </div>
+                       </div>                  
+                    </div>
+
+                    <!-- MAIN CONT -->
+                    
+                   <div class="maincont">
+                       <div class="contmessage">
+                            <div class="contmessagewhite">
+                                <div class="messagewhite">
+                                    
+                                </div>
+                            </div>
+                            <div class="contmessagegreen">
+                                <div class="messagegreen">
+                                    
+                                </div>
+                            </div>
+                       </div>
+
+                       <!-- FOOTER -->
+
+                       <div class="endmain">
+                        <i class="far fa-smile"></i>
+                        <input type="text" placeholder="Scrivi un messaggio">
+                        <i class="fas fa-microphone"></i>
+                       </div>
+                   </div> 
+                </main>
+    
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
