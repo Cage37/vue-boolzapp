@@ -170,7 +170,7 @@ const app = new Vue ({
             var userMessage = {
                 date: date.toLocaleString(),
                 status: "received",
-                text: "ok"
+                text: "Ok 👍🏻"
             };
 
             this.topProfile.messages.push(userMessage)
